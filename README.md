@@ -67,6 +67,12 @@ read each file, and compare what your reader reports with `expect` in
 - `reports`: reports about the document as a whole (not a document,
   assemblies).
 
+## Licence
+
+The sample files, `cases.json` and `hard-variants.txt` are dedicated to the
+public domain under CC0 1.0 (see `LICENSE`). They may be copied into
+implementations and their tests without attribution.
+
 ## Cases
 
 | File | What was changed | Sections |
