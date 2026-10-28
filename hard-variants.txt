@@ -1,0 +1,24 @@
+near-halves-rotation:
+    reference                                  0 pixels differ
+    taps added column by column                10 pixels differ
+    taps added pairwise                        5 pixels differ
+    K(u−n) × (K(v−m) × P)                      3 pixels differ
+    kernel written as a plain polynomial       14 pixels differ
+    cos and sin from the maths library         13 pixels differ
+    fused multiply-add                         2 pixels differ
+near-halves-enlarge:
+    reference                                  0 pixels differ
+    down first, then across                    11 pixels differ
+    rounded between the two passes             165 pixels differ
+    sums added pairwise                        5 pixels differ
+    multiplied by 1 ÷ (sum of weights)         0 pixels differ
+    kernel written as a plain polynomial       10 pixels differ
+    fused multiply-add                         4 pixels differ
+near-halves-shrink:
+    reference                                  0 pixels differ
+    down first, then across                    8 pixels differ
+    rounded between the two passes             37 pixels differ
+    sums added pairwise                        11 pixels differ
+    multiplied by 1 ÷ (sum of weights)         3 pixels differ
+    kernel written as a plain polynomial       8 pixels differ
+    fused multiply-add                         3 pixels differ
