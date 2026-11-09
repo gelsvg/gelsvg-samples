@@ -21,7 +21,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -57,7 +57,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -93,7 +93,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -110,9 +110,52 @@
       }
     },
     {
+      "file": "valid/marker-unit-V5.gel.svg",
+      "made_from": "valid/single-V5.gel.svg",
+      "change": "MyWB 0.7.0 saved the 'V5' document with the unit of its marker labels' numbers typed once: the labels hold '50' and '37', and core.marker_unit 'kDa', drawn above the numbers.",
+      "sections": [
+        "5.14"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "marker_sizes": [
+              {
+                "value": 50,
+                "unit": "kDa"
+              },
+              {
+                "value": 37,
+                "unit": "kDa"
+              }
+            ],
+            "reports": []
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
       "file": "valid/single-HA-light.gel.svg",
       "made_from": null,
-      "change": "MyWB 0.7.0 saved the 'HA' document without its source pixels: nothing is embedded.",
+      "change": "MyWB 0.7.0 saved the 'HA' document without its source pixels: nothing is embedded. The one single panel without source pixels (§1.4 allows it).",
       "sections": [
         "1.4",
         "5.2",
@@ -128,7 +171,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "not_embedded",
               "s2/gray": "not_embedded"
             },
@@ -142,7 +185,7 @@
     {
       "file": "valid/compact-HA.gel.svg",
       "made_from": "valid/single-HA.gel.svg",
-      "change": "The HA panel's content on a 250 x 600 part of its source images, saved as PNG files with a text chunk and read as source files, written and drawn by the sample builder: the small base of the variants that need embedded pixels.",
+      "change": "The HA panel's content on a 250 x 600 part of its source images, saved as PNG files with a text chunk and read as source files, written and drawn by the sample builder: the small base of the single-panel variants.",
       "sections": [
         "1",
         "5",
@@ -158,7 +201,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -192,7 +235,7 @@
               "drawn_from": "matched",
               "svg_hash": "absent"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -230,7 +273,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -248,7 +291,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -266,7 +309,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -295,7 +338,7 @@
     {
       "file": "valid/assembly-light.gel.svg",
       "made_from": "the three documents saved without source pixels",
-      "change": "The same assembly, its panels without source pixels.",
+      "change": "The same assembly, its panels saved without source pixels: the one assembly without them (§1.4 allows it).",
       "sections": [
         "1.7"
       ],
@@ -309,7 +352,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "not_embedded",
               "s2/gray": "not_embedded"
             },
@@ -322,7 +365,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "not_embedded",
               "s2/gray": "not_embedded"
             },
@@ -335,7 +378,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "not_embedded",
               "s2/gray": "not_embedded"
             },
@@ -357,8 +400,88 @@
       }
     },
     {
+      "file": "valid/assembly-compact.gel.svg",
+      "made_from": "the three panels' content on 250 x 600 parts of their source images, as in valid/compact-HA.gel.svg",
+      "change": "The three panels on small parts of their source images drawn together as one assembly, as valid/assembly-Flag-HA-V5.gel.svg is: the small base of the assembly variants.",
+      "sections": [
+        "1.7",
+        "6.5"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          },
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          },
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          }
+        ],
+        "assemblies": [
+          {
+            "members": 3,
+            "panels": [
+              0,
+              1,
+              2
+            ],
+            "missing": []
+          }
+        ],
+        "reports": []
+      }
+    },
+    {
       "file": "container/utf-16.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "The whole SVG re-encoded as UTF-16 (with a byte order mark).",
       "sections": [
         "1.1"
@@ -376,7 +499,7 @@
     },
     {
       "file": "container/gzip.gel.svgz",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "The SVG compressed with gzip (.svgz).",
       "sections": [
         "1.1"
@@ -394,7 +517,7 @@
     },
     {
       "file": "container/doctype-entity.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "A document type declaration whose internal subset declares an entity (never used).",
       "sections": [
         "1.1"
@@ -412,7 +535,7 @@
     },
     {
       "file": "container/doctype-external.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "A document type declaration that only points to an external DTD. Read as if absent (the DTD is not fetched); canonical XML leaves it out, so svg_hash still matches.",
       "sections": [
         "1.1",
@@ -428,10 +551,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           }
         ],
@@ -441,7 +569,7 @@
     },
     {
       "file": "container/xlink-href.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "The carrier PNG moved to xlink:href, its data URI written as 'data:image/PNG ; name=panel.png ; base64,' with the base64 broken into lines. Still the same panel; the SVG differs, so svg_hash differs.",
       "sections": [
         "1.2",
@@ -457,10 +585,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           }
         ],
@@ -470,7 +603,7 @@
     },
     {
       "file": "container/defs-use.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "The carrier PNG's image moved into <defs> and drawn with <use>. Still one panel; svg_hash differs.",
       "sections": [
         "1.2",
@@ -486,10 +619,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           }
         ],
@@ -547,7 +685,7 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -571,7 +709,7 @@
     {
       "file": "png/gels-crc.gel.svg",
       "made_from": "valid/compact-HA.gel.svg",
-      "change": "The CRC of the geLs holding the blot's channel image no longer matches; its payload is intact, so the header's SHA-256 recovers it.",
+      "change": "The CRC of the geLs holding the blot's source channel image no longer matches; its payload is intact, so the header's SHA-256 recovers it.",
       "sections": [
         "1.4"
       ],
@@ -585,7 +723,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -610,7 +748,7 @@
     {
       "file": "png/gels-payload.gel.svg",
       "made_from": "valid/compact-HA.gel.svg",
-      "change": "One byte of the blot's channel image payload changed (the chunk's CRC left as it was): the chunk cannot be recovered and the blot's channel is not embedded.",
+      "change": "One byte of the blot's source channel image payload changed (the chunk's CRC left as it was): the chunk cannot be recovered and the blot's source channel is not embedded.",
       "sections": [
         "1.4",
         "5.3"
@@ -625,7 +763,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "not_embedded",
               "s2/gray": "embedded"
             },
@@ -636,7 +774,7 @@
             "reports": [
               {
                 "kind": "damaged",
-                "about": "a geLs is damaged and set aside; the blot's channel image is missing because of it",
+                "about": "a geLs is damaged and set aside; the blot's source channel image is missing because of it",
                 "required": true
               }
             ]
@@ -666,7 +804,7 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -732,7 +870,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -773,7 +911,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -798,7 +936,7 @@
     {
       "file": "png/gels-type-damaged.gel.svg",
       "made_from": "valid/compact-HA.gel.svg",
-      "change": "One bit of the type of the geLs holding the blot's channel image changed, turning 'geLs' into 'GeLs': a critical chunk whose CRC does not match. The rendered image is unusable, and the blot's channel image, not found, is reported as damage, not as a writer's error.",
+      "change": "One bit of the type of the geLs holding the blot's source channel image changed, turning 'geLs' into 'GeLs': a critical chunk whose CRC does not match. The rendered image is unusable, and the blot's source channel image, not found, is reported as damage, not as a writer's error.",
       "sections": [
         "1.3",
         "5.3"
@@ -813,7 +951,7 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "not_embedded",
               "s2/gray": "embedded"
             },
@@ -824,7 +962,7 @@
             "reports": [
               {
                 "kind": "damaged",
-                "about": "a critical chunk's CRC does not match, so the rendered image is unusable; the blot's channel image may have been in it",
+                "about": "a critical chunk's CRC does not match, so the rendered image is unusable; the blot's source channel image may have been in it",
                 "required": true
               }
             ]
@@ -868,7 +1006,7 @@
     },
     {
       "file": "json/repeated-key.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "The key 'note' appears twice in 'core'.",
       "sections": [
         "2.1",
@@ -894,7 +1032,7 @@
     },
     {
       "file": "json/nan.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "orientation.rotation written as NaN.",
       "sections": [
         "2.1",
@@ -920,8 +1058,8 @@
     },
     {
       "file": "json/null-optional.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
-      "change": "core.annotation written as null, and the writer's hashes taken over the core as written (with the null).",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "core.annotations written as null, and the writer's hashes taken over the core as written (with the null).",
       "sections": [
         "2.1",
         "2.6",
@@ -937,14 +1075,19 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "broken",
-                "about": "core.annotation is null: read as absent",
+                "about": "core.annotations is null: read as absent",
                 "required": true
               }
             ]
@@ -956,7 +1099,7 @@
     },
     {
       "file": "json/empty-optional.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "core.note written as an empty string; hashes taken over the core as written.",
       "sections": [
         "2.4",
@@ -973,10 +1116,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "broken",
@@ -992,7 +1140,7 @@
     },
     {
       "file": "json/integer-as-decimal.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "orientation.turn written as 0.0 (not an integer). drawn_from is left as it was: canonical JSON writes 0.0 as 0, so the hash of the core does not change.",
       "sections": [
         "2.2",
@@ -1009,9 +1157,13 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
             },
             "reports": [
               {
@@ -1033,7 +1185,7 @@
     },
     {
       "file": "json/crlf.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "The named row's name holds CR LF; hashes taken over the name as written.",
       "sections": [
         "2.5",
@@ -1049,10 +1201,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "reinterpreted",
@@ -1068,7 +1225,7 @@
     },
     {
       "file": "json/unknown-key-revision-0.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "A key this version does not define (core.sources[0].wavelength_nm) in a panel of revision 0; hashes taken over the core as written (with the key).",
       "sections": [
         "2.6 rule 1",
@@ -1085,10 +1242,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "broken",
@@ -1104,7 +1266,7 @@
     },
     {
       "file": "json/unknown-key-revision-1.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "A key this version does not define (core.sources[0].wavelength_nm) in a panel of revision 1; hashes taken over the core as written (with the key).",
       "sections": [
         "2.6 rule 1",
@@ -1121,10 +1283,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "unknown",
@@ -1140,7 +1307,7 @@
     },
     {
       "file": "json/newer-version.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "schema_version 2.",
       "sections": [
         "9"
@@ -1165,7 +1332,7 @@
     },
     {
       "file": "json/no-revision.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "schema_revision left out: read, and taken as a newer revision.",
       "sections": [
         "3",
@@ -1181,10 +1348,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "broken",
@@ -1201,7 +1373,7 @@
     {
       "file": "json/closed-object-unknown-key.gel.svg",
       "made_from": "valid/compact-HA.gel.svg",
-      "change": "An unknown key in the catalog entry of the blot's channel image, a closed object: the entry is broken, so the blot's channel is not embedded. Its geLs is used by the entry as written, so it is not reported again (§5.3).",
+      "change": "An unknown key in the catalog entry of the blot's source channel image, a closed object: the entry is broken, so the blot's source channel is not embedded. Its geLs is used by the entry as written, so it is not reported again (§5.3).",
       "sections": [
         "2.6 rule 1",
         "5.3"
@@ -1216,7 +1388,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "not_embedded",
               "s2/gray": "embedded"
             },
@@ -1240,7 +1412,7 @@
     {
       "file": "json/channel-image-kind-revision-1.gel.svg",
       "made_from": "valid/compact-HA.gel.svg",
-      "change": "The catalog entry of the blot's channel image has a kind this version does not define, in a panel of revision 1: the entry is not used, and its geLs is still used by it as written, so the geLs is not reported as unused.",
+      "change": "The catalog entry of the blot's source channel image has a kind this version does not define, in a panel of revision 1: the entry is not used, and its geLs is still used by it as written, so the geLs is not reported as unused.",
       "sections": [
         "2.6 rule 2",
         "5.3"
@@ -1255,7 +1427,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "not_embedded",
               "s2/gray": "embedded"
             },
@@ -1266,7 +1438,7 @@
             "reports": [
               {
                 "kind": "unknown",
-                "about": "a channel image of an unknown kind is not used; writing the panel again loses it",
+                "about": "a source channel image of an unknown kind is not used; writing the panel again loses it",
                 "required": true
               }
             ]
@@ -1278,8 +1450,8 @@
     },
     {
       "file": "core/band-unknown-lane.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
-      "change": "The band in lane 1, row r2 refers to lane 'zz', which does not exist.",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "The band in lane 1, row r1 refers to lane 'zz', which does not exist.",
       "sections": [
         "2.6 rule 3",
         "5.13"
@@ -1294,10 +1466,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "broken",
@@ -1313,8 +1490,8 @@
     },
     {
       "file": "core/band-same-cell.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
-      "change": "A second band in the cell of lane 3, row r2, written after the first.",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "A second band in the cell of lane 3, row r1, written after the first.",
       "sections": [
         "2.6 rule 3",
         "5.13"
@@ -1329,10 +1506,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "broken",
@@ -1347,8 +1529,48 @@
       }
     },
     {
+      "file": "core/row-repeated-first-broken.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "Row r1 written twice; the first has no channel and is broken. Repetition is judged as written: the second is dropped as a repetition, and the bands on r1, whose row cannot be told, with it.",
+      "sections": [
+        "2.6 rule 3",
+        "5.12"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": [
+              {
+                "kind": "broken",
+                "about": "row r1 is written twice, the first broken: both rows and the bands on r1 are dropped",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
       "file": "core/lane-number-repeated.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "Lane '2' has number 1, as lane '1' (earlier in the array) does.",
       "sections": [
         "2.6 rule 3",
@@ -1364,10 +1586,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "broken",
@@ -1383,11 +1610,12 @@
     },
     {
       "file": "core/contrast-reversed.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "The reference channel's contrast written max first.",
       "sections": [
         "4.5",
         "5.6",
+        "5.7",
         "2.6 rule 4"
       ],
       "expect": {
@@ -1400,19 +1628,23 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
             },
             "reports": [
               {
                 "kind": "unreadable",
-                "about": "the first element of the blot is broken, so core.blot cannot be read",
+                "about": "the reference channel is broken, so core.reference_channel cannot be read",
                 "required": true
               },
               {
                 "kind": "broken",
-                "about": "core.blot[0] as a broken element",
+                "about": "the reference channel as a broken element",
                 "required": false
               }
             ]
@@ -1423,9 +1655,393 @@
       }
     },
     {
+      "file": "core/reference-undrawn.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "The marker channel, not drawn, is the reference channel; the blot, drawn, is lined up with it (the same size, not turned), so the picture is the same.",
+      "sections": [
+        "4.2",
+        "5.6",
+        "5.7",
+        "6.2"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "core/none-drawn.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "No panel channel is drawn ('drawn' false in the blot too).",
+      "sections": [
+        "5.6",
+        "6.2"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "reports": [
+              {
+                "kind": "broken",
+                "about": "no panel channel is drawn: the rendered image cannot be drawn again",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "core/row-on-marker-channel.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "The first row points to the marker channel, which a writer must not do; it is read as written.",
+      "sections": [
+        "5.6",
+        "5.12"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": [
+              {
+                "kind": "broken",
+                "about": "a row points to a marker channel (read as written)",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "core/same-source-turned-otherwise.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "A second marker channel on the blot's own source channel, turned 180° although the blot, the reference channel, is not. A writer should write one orientation for one source channel; the panel is still correct, and each panel channel is read as written.",
+      "sections": [
+        "5.6"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "core/reference-channel-missing.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "core.reference_channel left out.",
+      "sections": [
+        "2.6 rule 4",
+        "5.7"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "reports": [
+              {
+                "kind": "unreadable",
+                "about": "core.reference_channel cannot be read",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "core/blend-add.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "core.blend written as 'add', the way of combining it means when absent.",
+      "sections": [
+        "5.6",
+        "6.2"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "core/blend-multiply-revision-0.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "core.blend 'multiply', a value this version does not define, in a panel of revision 0.",
+      "sections": [
+        "2.6 rule 2",
+        "5.6",
+        "9"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": [
+              {
+                "kind": "broken",
+                "about": "core.blend 'multiply' is not known: ignored, the panel channels are added (a writer's error in the same revision)",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "core/role-unknown-revision-0.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "The marker channel's role written as 'total_protein', a value this version does not define, in a panel of revision 0.",
+      "sections": [
+        "2.6 rule 2",
+        "5.6",
+        "9"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": [
+              {
+                "kind": "broken",
+                "about": "role 'total_protein' is not known: ignored, a panel channel with no role (a writer's error in the same revision)",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "core/blend-multiply-revision-1.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "core.blend 'multiply', a value this version does not define, in a panel of revision 1.",
+      "sections": [
+        "2.6 rule 2",
+        "5.6",
+        "9"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "reports": [
+              {
+                "kind": "unknown",
+                "about": "core.blend 'multiply' is not known: the rendered image cannot be drawn again; writing the panel again loses it",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "core/role-unknown-revision-1.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "The marker channel's role written as 'total_protein', a value this version does not define, in a panel of revision 1.",
+      "sections": [
+        "2.6 rule 2",
+        "5.6",
+        "9"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": [
+              {
+                "kind": "unknown",
+                "about": "role 'total_protein' is not known: only the role is unknown; writing the panel again loses it",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
       "file": "core/band-shape-revision-0.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
-      "change": "The band in lane 4, row r2 has shape 'ellipse', in a panel of revision 0.",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "The band in lane 4, row r1 has shape 'ellipse', in a panel of revision 0.",
       "sections": [
         "2.6 rules 1-3",
         "5.13"
@@ -1440,10 +2056,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "broken",
@@ -1459,8 +2080,8 @@
     },
     {
       "file": "core/band-shape-revision-1.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
-      "change": "The band in lane 4, row r2 has shape 'ellipse', in a panel of revision 1.",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "The band in lane 4, row r1 has shape 'ellipse', in a panel of revision 1.",
       "sections": [
         "2.6 rules 1-3",
         "5.13"
@@ -1475,10 +2096,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "unknown",
@@ -1494,8 +2120,8 @@
     },
     {
       "file": "core/free-form-metadata.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
-      "change": "The blot's source image given source metadata in a free-form format (an https:// URL this reader does not know). It is kept, its hashes checked, and nothing is reported.",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "The blot's source image pointed to source metadata in a free-form format (an https:// URL this reader does not know) instead of its PNG chunks, which the marker's source image still points to. It is kept, its hashes checked, and nothing is reported.",
       "sections": [
         "5.4"
       ],
@@ -1509,13 +2135,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
             "source_metadata": {
-              "s1": "present"
+              "s1": "present",
+              "s2": "present"
             },
+            "redraw": "identical",
             "reports": []
           }
         ],
@@ -1525,7 +2153,7 @@
     },
     {
       "file": "figure/svg-text-edited.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "The row name drawn in the SVG changed from 'HA' to 'HA-tag' in an editor.",
       "sections": [
         "6.5"
@@ -1540,10 +2168,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           }
         ],
@@ -1570,7 +2203,7 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -1588,7 +2221,7 @@
     },
     {
       "file": "figure/core-edited.gel.svg",
-      "made_from": "quantified HA without source pixels",
+      "made_from": "valid/quantified-HA.gel.svg",
       "change": "The named row renamed in the JSON only (a script), the figure not drawn again. Names are left out of the quantification's hash, so the quantification stays current.",
       "sections": [
         "2.7",
@@ -1605,13 +2238,19 @@
               "drawn_from": "differs",
               "svg_hash": "absent"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
             },
             "quantifications": [
               "current"
             ],
+            "redraw": "identical",
+            "remeasure": "identical",
             "reports": []
           }
         ],
@@ -1621,8 +2260,8 @@
     },
     {
       "file": "figure/quantification-stale.gel.svg",
-      "made_from": "quantified HA without source pixels",
-      "change": "The band in lane 1, row r2 moved 4 pixels right in the JSON only: the figure and the quantification are both out of date.",
+      "made_from": "valid/quantified-HA.gel.svg",
+      "change": "The band in lane 1, row r1 moved 4 pixels right in the JSON only: the figure and the quantification are both out of date.",
       "sections": [
         "6.4",
         "7.4"
@@ -1637,13 +2276,19 @@
               "drawn_from": "differs",
               "svg_hash": "absent"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
             },
             "quantifications": [
               "stale"
             ],
+            "redraw": "identical",
+            "remeasure": "identical",
             "reports": []
           }
         ],
@@ -1653,7 +2298,7 @@
     },
     {
       "file": "figure/computed-on-sha512-revision-0.gel.svg",
-      "made_from": "quantified HA without source pixels",
+      "made_from": "valid/quantified-HA.gel.svg",
       "change": "The quantification's computed_on written as a 'sha512:' hash, a kind this version does not define, in a panel of revision 0.",
       "sections": [
         "2.2",
@@ -1670,11 +2315,16 @@
               "drawn_from": "matched",
               "svg_hash": "absent"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
             },
             "quantifications": [],
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "broken",
@@ -1690,7 +2340,7 @@
     },
     {
       "file": "figure/computed-on-sha512-revision-1.gel.svg",
-      "made_from": "quantified HA without source pixels",
+      "made_from": "valid/quantified-HA.gel.svg",
       "change": "The quantification's computed_on written as a 'sha512:' hash, a kind this version does not define, in a panel of revision 1.",
       "sections": [
         "2.2",
@@ -1707,13 +2357,19 @@
               "drawn_from": "matched",
               "svg_hash": "absent"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
             },
             "quantifications": [
               "unknown"
             ],
+            "redraw": "identical",
+            "remeasure": "identical",
             "reports": [
               {
                 "kind": "unknown",
@@ -1729,7 +2385,7 @@
     },
     {
       "file": "figure/drawn-from-sha512-revision-0.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "figure.drawn_from written as a 'sha512:' hash in a panel of revision 0.",
       "sections": [
         "2.2",
@@ -1746,10 +2402,15 @@
               "drawn_from": "unknown",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "broken",
@@ -1765,8 +2426,8 @@
     },
     {
       "file": "figure/form-written-wrong.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
-      "change": "The only blot element given a colour, so the core asks for an RGB picture, while the picture stays grey; hashes taken over the core as written, so rendered_hash and drawn_from both match.",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "The only drawn panel channel given a colour, so the core asks for an RGB picture, while the picture stays grey; hashes taken over the core as written, so rendered_hash and drawn_from both match.",
       "sections": [
         "6.2"
       ],
@@ -1780,9 +2441,13 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
             },
             "reports": [
               {
@@ -1799,7 +2464,7 @@
     },
     {
       "file": "figure/form-redrawn.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "The grey picture replaced by the same picture as RGB after it was drawn: its form no longer matches the core, and rendered_hash differs, so it is a check result, not a report.",
       "sections": [
         "6.2",
@@ -1815,9 +2480,13 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
             },
             "reports": []
           }
@@ -1828,7 +2497,7 @@
     },
     {
       "file": "figure/size-unchecked.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "crop one pixel narrower than the picture, and rendered_hash a 'sha512:' hash (revision 0), so nothing shows the picture was changed.",
       "sections": [
         "2.2",
@@ -1844,9 +2513,13 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
             },
             "reports": [
               {
@@ -1864,7 +2537,7 @@
     {
       "file": "figure/channel-image-replaced.gel.svg",
       "made_from": "valid/compact-HA.gel.svg",
-      "change": "The blot's channel image replaced by one with a patch blacked out, its catalog entry and geLs made consistent, but its pixel_hash left as it was.",
+      "change": "The blot's source channel image replaced by one with a patch blacked out, its catalog entry and geLs made consistent, but its pixel_hash left as it was.",
       "sections": [
         "5.3",
         "6.6"
@@ -1879,7 +2552,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "not_embedded",
               "s2/gray": "embedded"
             },
@@ -1890,7 +2563,7 @@
             "reports": [
               {
                 "kind": "broken",
-                "about": "the blot's channel image does not match its pixel_hash",
+                "about": "the blot's source channel image does not match its pixel_hash",
                 "required": true
               }
             ]
@@ -1902,7 +2575,7 @@
     },
     {
       "file": "figure/svg-hash-method-unknown.gel.svg",
-      "made_from": "valid/single-HA-light.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
       "change": "figure.svg_hash_method has a value this version does not define, in a panel of revision 0.",
       "sections": [
         "2.6 rule 1",
@@ -1919,10 +2592,15 @@
               "drawn_from": "matched",
               "svg_hash": "unknown"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": [
               {
                 "kind": "broken",
@@ -1937,8 +2615,160 @@
       }
     },
     {
+      "file": "figure/svg-hash-method-alone.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "figure.svg_hash_method written without figure.svg_hash.",
+      "sections": [
+        "2.6 rule 3",
+        "6.1"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "absent"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": [
+              {
+                "kind": "broken",
+                "about": "svg_hash_method without svg_hash is read as absent",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "figure/style.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "figure.style written with every key §6.7 defines (the table divided between top and bottom where there are two conditions or more).",
+      "sections": [
+        "6.7"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "figure/style-written-wrong.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "figure.style with an empty font_family, a negative image_scale, a sample label form and a marker label side this version does not define, a split with no table, and a side for the annotation, which has none; in a panel of revision 0.",
+      "sections": [
+        "2.6 rules 1-3",
+        "6.7"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": [
+              {
+                "kind": "broken",
+                "about": "each bad key of figure.style is read as absent",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "figure/style-sides-wrong.gel.svg",
+      "made_from": "valid/compact-HA.gel.svg",
+      "change": "figure.style with a marker label side_automatic but no side, and row names on mixed sides said not to be decided by the tool; in a panel of revision 0.",
+      "sections": [
+        "6.7"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": [
+              {
+                "kind": "broken",
+                "about": "side_automatic without side is read as absent; a mixed side without side_automatic true is read as absent",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
       "file": "assembly/copies.gel.svg",
-      "made_from": "valid/assembly-light.gel.svg",
+      "made_from": "valid/assembly-compact.gel.svg",
       "change": "The assembly's <g> copied beside itself: two copies, each in its own <g>.",
       "sections": [
         "1.7"
@@ -1953,10 +2783,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -1966,10 +2801,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -1979,10 +2819,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -1992,10 +2837,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -2005,10 +2855,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -2018,10 +2873,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           }
         ],
@@ -2056,7 +2916,7 @@
     },
     {
       "file": "assembly/copies-ungrouped.gel.svg",
-      "made_from": "valid/assembly-light.gel.svg",
+      "made_from": "valid/assembly-compact.gel.svg",
       "change": "The same two copies with both assembly <g> elements ungrouped (each panel keeps its own <g>): the copies cannot be told apart.",
       "sections": [
         "1.7"
@@ -2071,10 +2931,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -2084,10 +2949,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -2097,10 +2967,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -2110,10 +2985,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -2123,10 +3003,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -2136,10 +3021,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           }
         ],
@@ -2155,7 +3045,7 @@
     },
     {
       "file": "assembly/members-disagree.gel.svg",
-      "made_from": "valid/assembly-light.gel.svg",
+      "made_from": "valid/assembly-compact.gel.svg",
       "change": "Member 2 says the assembly has 4 members; the others say 3.",
       "sections": [
         "1.7"
@@ -2170,10 +3060,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -2183,10 +3078,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -2196,10 +3096,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           }
         ],
@@ -2214,8 +3119,260 @@
       }
     },
     {
+      "file": "assembly/names.gel.svg",
+      "made_from": "valid/assembly-compact.gel.svg",
+      "change": "Each panel given its name within the set (assembly.name).",
+      "sections": [
+        "1.7"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          },
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          },
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          }
+        ],
+        "assemblies": [
+          {
+            "members": 3,
+            "panels": [
+              0,
+              1,
+              2
+            ],
+            "missing": []
+          }
+        ],
+        "reports": []
+      }
+    },
+    {
+      "file": "assembly/name-not-a-string.gel.svg",
+      "made_from": "valid/assembly-compact.gel.svg",
+      "change": "Member 2's name within the set is a number.",
+      "sections": [
+        "1.7",
+        "2.6 rule 3"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          },
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": [
+              {
+                "kind": "broken",
+                "about": "the name alone is read as absent; the assembly is kept",
+                "required": true
+              }
+            ]
+          },
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          }
+        ],
+        "assemblies": [
+          {
+            "members": 3,
+            "panels": [
+              0,
+              1,
+              2
+            ],
+            "missing": []
+          }
+        ],
+        "reports": []
+      }
+    },
+    {
+      "file": "assembly/omitted-unknown-part.gel.svg",
+      "made_from": "valid/assembly-compact.gel.svg",
+      "change": "Member 2 says the set left out of it a part no revision 0 defines ('scale_bar'), in a panel of revision 0.",
+      "sections": [
+        "1.7",
+        "2.6 rule 2",
+        "2.6 rule 3"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          },
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": [
+              {
+                "kind": "broken",
+                "about": "'omitted' alone is read as absent; the assembly is kept",
+                "required": true
+              }
+            ]
+          },
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
+            "reports": []
+          }
+        ],
+        "assemblies": [
+          {
+            "members": 3,
+            "panels": [
+              0,
+              1,
+              2
+            ],
+            "missing": []
+          }
+        ],
+        "reports": []
+      }
+    },
+    {
       "file": "assembly/missing-member.gel.svg",
-      "made_from": "valid/assembly-light.gel.svg",
+      "made_from": "valid/assembly-compact.gel.svg",
       "change": "Member 3's group deleted from the figure.",
       "sections": [
         "1.7"
@@ -2230,10 +3387,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -2243,10 +3405,15 @@
               "drawn_from": "matched",
               "svg_hash": "differs"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           }
         ],
@@ -2273,7 +3440,7 @@
     },
     {
       "file": "assembly/newer-version-member.gel.svg",
-      "made_from": "valid/assembly-light.gel.svg",
+      "made_from": "valid/assembly-compact.gel.svg",
       "change": "Member 2 is a panel of schema_version 2.",
       "sections": [
         "1.7",
@@ -2289,10 +3456,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           },
           {
@@ -2312,10 +3484,15 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
-              "s1/gray": "not_embedded",
-              "s2/gray": "not_embedded"
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
+            "source_metadata": {
+              "s1": "present",
+              "s2": "present"
+            },
+            "redraw": "identical",
             "reports": []
           }
         ],
@@ -2359,7 +3536,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded"
             },
             "quantifications": [],
@@ -2390,7 +3567,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded"
             },
             "quantifications": [],
@@ -2405,7 +3582,7 @@
     {
       "file": "drawing/two-channels.gel.svg",
       "made_from": "a 170 x 540 part of the HA membrane's blot and marker images",
-      "change": "Two channels drawn in colour, whose sums pass 1 in green and are clamped. The second, half the size and stored upside down, is turned 180°, mirrored and matched to the reference's size (enlarging), and then both turn by -2.5°.",
+      "change": "Two panel channels drawn in colour, whose sums pass 1 in green and are clamped. The second, half the size and stored upside down, is turned 180°, mirrored and matched to the reference's size (enlarging), and then both turn by -2.5°.",
       "sections": [
         "4.2",
         "4.3",
@@ -2421,7 +3598,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -2437,7 +3614,7 @@
     {
       "file": "drawing/shrink-to-match.gel.svg",
       "made_from": "a 170 x 540 part of the HA membrane's blot and marker images",
-      "change": "The second channel, twice the size, is shrunk to the reference's size: the weight function widens as it shrinks.",
+      "change": "The second panel channel, twice the size, is shrunk to the reference's size: the weight function widens as it shrinks.",
       "sections": [
         "4.3",
         "6.2"
@@ -2452,7 +3629,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -2483,7 +3660,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded"
             },
             "quantifications": [],
@@ -2513,7 +3690,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded"
             },
             "quantifications": [],
@@ -2528,7 +3705,7 @@
     {
       "file": "drawing/average.gel.svg",
       "made_from": "a 170 x 540 part of the HA membrane's blot and marker images",
-      "change": "An RGB source drawn by the average of its three channels, whose image is not embedded; the element records its pixel_hash.",
+      "change": "An RGB source drawn by the average of its three source channels, whose image is neither embedded nor given a pixel_hash of its own (its source channels' say which pixels it is).",
       "sections": [
         "4.4",
         "5.6",
@@ -2544,7 +3721,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/red": "embedded",
               "s1/green": "embedded",
               "s1/blue": "embedded"
@@ -2576,7 +3753,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded"
             },
             "quantifications": [],
@@ -2607,8 +3784,72 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded"
+            },
+            "quantifications": [],
+            "redraw": "identical",
+            "reports": []
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "drawing/undrawn-reference.gel.svg",
+      "made_from": "a 170 x 540 part of the HA membrane's blot and marker images",
+      "change": "The reference channel is a marker channel that is not drawn; the one drawn panel channel is lined up with it (turned 180° and mirrored) and drawn alone, in grey.",
+      "sections": [
+        "4.2",
+        "5.6",
+        "5.7",
+        "6.2"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
+            },
+            "quantifications": [],
+            "redraw": "identical",
+            "reports": []
+          }
+        ],
+        "assemblies": [],
+        "reports": []
+      }
+    },
+    {
+      "file": "drawing/marker-channel-drawn.gel.svg",
+      "made_from": "a 170 x 540 part of the HA membrane's blot and marker images",
+      "change": "A marker channel drawn in red over the blot in white: a drawn marker channel is combined as any other drawn panel channel.",
+      "sections": [
+        "5.6",
+        "6.2"
+      ],
+      "expect": {
+        "document": true,
+        "panels": [
+          {
+            "read": "yes",
+            "checks": {
+              "rendered_hash": "matched",
+              "drawn_from": "matched",
+              "svg_hash": "matched"
+            },
+            "source_channels": {
+              "s1/gray": "embedded",
+              "s2/gray": "embedded"
             },
             "quantifications": [],
             "redraw": "identical",
@@ -2638,7 +3879,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded"
             },
             "quantifications": [
@@ -2672,7 +3913,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded"
             },
             "quantifications": [
@@ -2690,7 +3931,7 @@
     {
       "file": "drawing/near-halves-enlarge.gel.svg",
       "made_from": "a 170 x 540 part of the HA membrane's blot and marker images",
-      "change": "Size matching by an odd ratio (53 x 77 to 84 x 120, enlarging), with 24 output pixels of the second channel set within about 1e-19 of a half.",
+      "change": "Size matching by an odd ratio (53 x 77 to 84 x 120, enlarging), with 24 output pixels of the second panel channel set within about 1e-19 of a half.",
       "sections": [
         "4.3",
         "6.2"
@@ -2705,7 +3946,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
@@ -2721,7 +3962,7 @@
     {
       "file": "drawing/near-halves-shrink.gel.svg",
       "made_from": "a 170 x 540 part of the HA membrane's blot and marker images",
-      "change": "Size matching by an odd ratio (131 x 187 to 84 x 120, shrinking), with 24 output pixels of the second channel set within about 1e-19 of a half.",
+      "change": "Size matching by an odd ratio (131 x 187 to 84 x 120, shrinking), with 24 output pixels of the second panel channel set within about 1e-19 of a half.",
       "sections": [
         "4.3",
         "6.2"
@@ -2736,7 +3977,7 @@
               "drawn_from": "matched",
               "svg_hash": "matched"
             },
-            "channels": {
+            "source_channels": {
               "s1/gray": "embedded",
               "s2/gray": "embedded"
             },
